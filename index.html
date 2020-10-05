@@ -15,10 +15,16 @@
     </label>
     <br>
         <p>Find Foot</p>
-            <button onclick="findFoodInRefrigerator ()">Холодильник</button>
-                <div id="show_list"></div>
-                     <button>Кухонная плита</button>
-                        <button>Шкафчик</button>
+            <div class="box">
+                <button onclick="findFoodInRefrigerator ()">Холодильник</button>
+                     <button onclick="findFoodInGasStove ()">Кухонная плита</button>
+                        <button onclick="findFoodInCupboard ()">Шкафчик</button>
+            </div>
+    <div class="box">
+        <p id="show_listRefrigerator"></p>
+        <p id="show_listGasStove"></p>
+        <p id="show_listCupboard"></p>
+    </div>
 </div>
 </body>
 </html>
