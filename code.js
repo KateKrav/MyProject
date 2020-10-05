@@ -35,11 +35,15 @@ function findFoodInRefrigerator () {
             document.getElementById("show_listRefrigerator").innerHTML = str;
         }
     }
-    if (open_list===false){
-    } str = open_list;
+    end_of_list();
     }
 
-
+function end_of_list() {
+    if (open_list===false){
+    } str = open_list;
+    str1 = open_list;
+    str2 = open_list;
+}
 
 
 function findFoodInGasStove () {
@@ -49,7 +53,7 @@ function findFoodInGasStove () {
             document.getElementById("show_listGasStove").innerHTML = str1;
         }
     }
-
+    end_of_list();
 }
 
 function findFoodInCupboard () {
@@ -59,4 +63,5 @@ function findFoodInCupboard () {
             document.getElementById("show_listCupboard").innerHTML = str2;
         }
     }
+    end_of_list();
     }
