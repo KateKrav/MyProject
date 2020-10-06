@@ -1,25 +1,30 @@
 "use strict";
 
 
-let getStatus;
-let refrigerator = ["макароны", "салат", "фрукты", "сок", "бутерброт"];
-let gasStove = ["жаренная курочка", "суп", "борщ", "пюре"];
-let cupboard = ["сухарики", "чипсы", "печенье", "шоколад"];
+let userRequest;
+let refrigeratorFoodList = ["макароны", "салат", "фрукты", "сок", "бутерброт"];
+let gasStoveFoodList = ["жаренная курочка", "суп", "борщ", "пюре"];
+let cupboardFoodList = ["сухарики", "чипсы", "печенье", "шоколад"];
 let refrigeratorIsChecked = false;
 let gasStoveIsChecked = false;
 let cupboardIsChecked = false;
 
-let frigleFoogList = "";
-let frigleFoogListGasStove = "";
-let frigleFoogListCupboard = "";
+let refrigeratorListToShow = "";
+let GasStoveListToShow = "";
+let cupboardListToShow = "";
+
+let orderedDish;
+
 
 
 
 function getFood() {
-    getStatus = document.getElementById("inputMessage").value;
-    switch (getStatus) {
+    userRequest = document.getElementById("inputMessage").value;
+    switch (userRequest) {
         case "1" :
             console.log("Kate is at home");
+            orderedDish = prompt("Чего бы ты хотел поесть?");
+            getResultOrderedDish();
             break;
 
         case "2" :
@@ -34,9 +39,9 @@ function getFood() {
 
 function findFoodInRefrigerator() {
     if (refrigeratorIsChecked === false) {
-        for (let i = 0; i < refrigerator.length; i++) {
-            frigleFoogList = frigleFoogList + refrigerator[i] + "<br>";
-            document.getElementById('show_listRefrigerator').innerHTML = frigleFoogList;
+        for (let i = 0; i < refrigeratorFoodList.length; i++) {
+            refrigeratorListToShow = refrigeratorListToShow + refrigeratorFoodList[i] + "<br>";
+            document.getElementById('show_listRefrigerator').innerHTML = refrigeratorListToShow;
         }
         refrigeratorIsChecked = true;
 
@@ -45,9 +50,9 @@ function findFoodInRefrigerator() {
 
 function findFoodInGasStove() {
     if(gasStoveIsChecked === false){
-        for (let i = 0; i < gasStove.length; i++){
-            frigleFoogListGasStove = frigleFoogListGasStove + gasStove[i]+ "<br>";
-            document.getElementById("show_listGasStove").innerHTML = frigleFoogListGasStove;
+        for (let i = 0; i < gasStoveFoodList.length; i++){
+            GasStoveListToShow = GasStoveListToShow + gasStoveFoodList[i]+ "<br>";
+            document.getElementById("show_listGasStove").innerHTML = GasStoveListToShow;
         }
         gasStoveIsChecked = true;
     }
@@ -55,10 +60,26 @@ function findFoodInGasStove() {
 
 function findFoodInCupboard() {
     if(cupboardIsChecked === false){
-        for (let i = 0; i < cupboard.length; i++){
-            frigleFoogListCupboard = frigleFoogListCupboard + cupboard[i]+ "<br>";
-            document.getElementById("show_listCupboard").innerHTML = frigleFoogListCupboard;
+        for (let i = 0; i < cupboardFoodList.length; i++){
+            cupboardListToShow = cupboardListToShow + cupboardFoodList[i]+ "<br>";
+            document.getElementById("show_listCupboard").innerHTML = cupboardListToShow;
         }
         cupboardIsChecked = true;
     }
 }
+ function getFoodFromKate() {
+     if (userRequest === "1"){
+         orderedDish = prompt("Чего бы ты хотел поесть?");
+         refrigeratorFoodList.indexOf(orderedDish);
+         getResultOrderedDish();
+
+     }
+ }
+
+ function getResultOrderedDish() {
+    if (refrigeratorFoodList.indexOf(orderedDish)){
+        alert("Вот" + orderedDish + ", приятного аппетита !");
+    }else if (orderedDish === false){
+         alert("Такого блюда нет");
+    }
+ }
