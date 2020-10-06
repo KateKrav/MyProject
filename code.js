@@ -2,14 +2,16 @@
 
 
 let getStatus;
-let refrigerator = ["макароны", "салат", "фрукты", "сок","бутерброт"];
+let refrigerator = ["макароны", "салат", "фрукты", "сок", "бутерброт"];
 let gasStove = ["жаренная курочка", "суп", "борщ", "пюре"];
-let cupboard= ["сухарики", "чипсы", "печенье", "шоколад"];
-let i;
-let str = ' ';
-let str1 = ' ';
-let str2 = ' ';
-let open_list = " ";
+let cupboard = ["сухарики", "чипсы", "печенье", "шоколад"];
+let refrigeratorIsChecked = false;
+let gasStoveIsChecked = false;
+let cupboardIsChecked = false;
+
+let frigleFoogList = "";
+let frigleFoogListGasStove = "";
+let frigleFoogListCupboard = "";
 
 
 
@@ -19,6 +21,7 @@ function getFood() {
         case "1" :
             console.log("Kate is at home");
             break;
+
         case "2" :
             console.log("Kate is not at home");
             break;
@@ -28,40 +31,34 @@ function getFood() {
 
 }
 
-function findFoodInRefrigerator () {
-    for (i = 0; i < refrigerator.length; i++){
-        if (refrigerator[i]!==undefined){
-            str += refrigerator[i]+'<br>';
-            document.getElementById("show_listRefrigerator").innerHTML = str;
-        }
-    }
-    end_of_list();
-    }
 
-function end_of_list() {
-    if (open_list===false){
-    } str = open_list;
-    str1 = open_list;
-    str2 = open_list;
+function findFoodInRefrigerator() {
+    if (refrigeratorIsChecked === false) {
+        for (let i = 0; i < refrigerator.length; i++) {
+            frigleFoogList = frigleFoogList + refrigerator[i] + "<br>";
+            document.getElementById('show_listRefrigerator').innerHTML = frigleFoogList;
+        }
+        refrigeratorIsChecked = true;
+
+    }
 }
 
-
-function findFoodInGasStove () {
-    for (i = 0; i < gasStove.length; i++){
-        if (gasStove[i]!==undefined){
-            str1 += gasStove[i]+'<br>';
-            document.getElementById("show_listGasStove").innerHTML = str1;
+function findFoodInGasStove() {
+    if(gasStoveIsChecked === false){
+        for (let i = 0; i < gasStove.length; i++){
+            frigleFoogListGasStove = frigleFoogListGasStove + gasStove[i]+ "<br>";
+            document.getElementById("show_listGasStove").innerHTML = frigleFoogListGasStove;
         }
+        gasStoveIsChecked = true;
     }
-    end_of_list();
 }
 
-function findFoodInCupboard () {
-    for (i = 0; i < cupboard.length; i++){
-        if (cupboard[i]!==undefined){
-            str2 += cupboard[i]+'<br>';
-            document.getElementById("show_listCupboard").innerHTML = str2;
+function findFoodInCupboard() {
+    if(cupboardIsChecked === false){
+        for (let i = 0; i < cupboard.length; i++){
+            frigleFoogListCupboard = frigleFoogListCupboard + cupboard[i]+ "<br>";
+            document.getElementById("show_listCupboard").innerHTML = frigleFoogListCupboard;
         }
+        cupboardIsChecked = true;
     }
-    end_of_list();
-    }
+}
