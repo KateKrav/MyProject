@@ -8,13 +8,14 @@
 </head>
 <body>
 <div class="container">
+    <img src="img/kitchen.jpg" alt="img">
     <label>
         <span>Kate at home?<br> yes - 1 ;<br> no - 2;</span><br><br>
         <input placeholder="Kate is at home" id="inputMessage">
         <button onclick="getFood()">Кнопка</button>
     </label>
     <br>
-        <p>Find Foot</p>
+
             <div class="box">
                 <button onclick="findFoodInRefrigerator ()">Холодильник</button>
                      <button onclick="findFoodInGasStove ()">Кухонная плита</button>
@@ -25,7 +26,10 @@
         <p id="show_listGasStove"></p>
         <p id="show_listCupboard"></p>
     </div>
-    <div class="wish"></div>
+
+    <button onclick="addFoodInRefrigerator()">Добавить еду в холодильник</button><br><br>
+    <button onclick="getFoodInRefrigerator()">Забрать забрать последние блюдо из списка</button>
+
 </div>
 </body>
 </html>
