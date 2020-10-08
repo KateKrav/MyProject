@@ -133,7 +133,7 @@ let gas_stone_is_clean = false;
 
 function cleanGas_Stone() {
 if (gas_stone_is_clean === false){
-    console('I cleaning gas stone!');
+    console.log('I cleaning gas stone!');
     gas_stone_is_clean = true;
 }
 }
