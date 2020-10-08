@@ -69,7 +69,7 @@ function findFoodInCupboard() {
             document.getElementById("show_listCupboard").innerHTML = cupboardListToShow;
         }
         cupboardIsChecked = true;
-    }
+    }  getFoodInRefrigerator();
 }
 
 
@@ -94,3 +94,19 @@ function findFoodInCupboard() {
 function getFoodInRefrigerator() {
     refrigeratorFoodList.pop();
 }
+
+function deleteFoodInRefrigerator() {
+    console.log(refrigeratorFoodList);
+    refrigeratorFoodList.splice(1,2, "компот", "рыба");
+    console.log(refrigeratorFoodList);
+}
+
+function addNewArray() {
+    refrigeratorFoodList.concat(["Пустая тарелка", 9 ]);
+    console.log(refrigeratorFoodList);
+}
+
+refrigeratorFoodList.forEach(console.log);
+
+refrigeratorFoodList.forEach((item,index,array) => {console.log('${item} имеет позицию ${index} в ${array}');
+});
