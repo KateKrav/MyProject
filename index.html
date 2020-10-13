@@ -5,6 +5,7 @@
     <title>Кухня</title>
     <link rel="stylesheet" href="style.css">
     <script rel="script" src="code.js"></script>
+<!--    <script rel="script"  src="code2.js"></script>-->
 </head>
 <body>
 <div class="container">
@@ -30,9 +31,13 @@
     <button onclick="addFoodInRefrigerator()">Добавить еду в холодильник</button><br><br>
     <button onclick="getFoodInRefrigerator()">Забрать забрать последние блюдо из списка</button><br><br>
 
-    <button onclick="deleteFoodInRefrigerator()">Кнопка</button><br><br>
-    <button onclick="addNewArray()">Кнопка</button>
-    <button onclick="use_for_each()">Кнопка</button>
+    <button onclick="deleteFoodInRefrigerator()">Удалить и заменить</button><br><br>
+    <button onclick="addNewArray()">Кнопка</button><br><br>
+    <button onclick="use_for_each()">Разделить на "здоровую" и вкусную еду </button>
+    <div class="box">
+        <p id="healthy_list_food"></p>
+        <p id="testy_list_food"></p>
+    </div>
 
 
 </div>

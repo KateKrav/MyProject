@@ -2,7 +2,7 @@
 
 
 let userRequest;
-let refrigeratorFoodList = ["макароны", "салат", "фрукты", "сок", "бутерброт"];
+let refrigeratorFoodList = ["макароны", "салат", "фрукты", "сок", "бутерброд"];
 let gasStoveFoodList = ["жаренные бёдрышка", "суп", "борщ", "пюре"];
 let cupboardFoodList = ["сухарики", "чипсы", "печенье", "шоколад"];
 let refrigeratorIsChecked = false;
@@ -37,17 +37,20 @@ function getFood() {
 
 }
 
-
 function findFoodInRefrigerator() {
-    if (refrigeratorIsChecked === false) {
-        refrigeratorListToShow = '';
-        for (let i = 0; i < refrigeratorFoodList.length; i++) {
-            refrigeratorListToShow = refrigeratorListToShow + refrigeratorFoodList[i] + "<br>";
-            document.getElementById('show_listRefrigerator').innerHTML = refrigeratorListToShow;
-        }
-        refrigeratorIsChecked = true;
-
+    refrigeratorListToShow = '';
+    for (let i = 0; i < refrigeratorFoodList.length; i++) {
+        refrigeratorListToShow = refrigeratorListToShow + refrigeratorFoodList[i] + "<br>";
     }
+
+    if (refrigeratorIsChecked === false) {
+        if (other_list !== undefined && other_list.length > 0){
+            refrigeratorListToShow = refrigeratorListToShow + other_list + "<br>";
+        }
+        document.getElementById('show_listRefrigerator').innerHTML = refrigeratorListToShow;
+        refrigeratorIsChecked = true;
+    }
+
 }
 
 function findFoodInGasStove() {
@@ -92,42 +95,47 @@ function addFoodInRefrigerator() {
 
 function getFoodInRefrigerator() {
     refrigeratorFoodList.pop();
+    refrigeratorIsChecked = false;
 }
 
 function deleteFoodInRefrigerator() {
     console.log(refrigeratorFoodList);
     refrigeratorFoodList.splice(1, 2, "компот", "рыба");
     console.log(refrigeratorFoodList);
+    refrigeratorIsChecked = false;
+}
+let other_list;
+function addNewArray() {
+    other_list = refrigeratorFoodList.concat([NaN, 9]);
+    // console.log(addSomething);
+    refrigeratorIsChecked = false;
 }
 
-// function addNewArray() {
-//     refrigeratorFoodList.concat(["Пустая тарелка", 9]);
-//     console.log(refrigeratorFoodList);
-// }
-//
 // refrigeratorFoodList.forEach(console.log);
-//
+
 // refrigeratorFoodList.forEach(function (item, index, array) {
 //     console.log(`${item} имеет позицию ${index} в ${array}`);
 // });
 
 let healthy_food = [];
 let testy_food = [];
+let list_healthy;
+let list_testy;
 
 function use_for_each() {
 
-    refrigeratorFoodList.forEach(function (dash, i, arr) {
-        if (dash === 'макароны' || dash === 'бутерброт') {
+    refrigeratorFoodList.forEach(function (dash) {
+        if (dash === 'макароны' || dash === 'бутерброд') {
             testy_food.push(dash);
         } else healthy_food.push(dash)
-    })
-    console.log(`Перечень здоровой еды в холодильнике:${healthy_food}\nПеречень такой себе еды в холодильнике:${testy_food}`)
+    });
+    // console.log(`Перечень здоровой еды в холодильнике:${healthy_food}\nПеречень такой себе еды в холодильнике:${testy_food}`);
+    list_healthy = 'Перечень здоровой еды в холодильнике:'+ " " + healthy_food;
+    document.getElementById("healthy_list_food").innerHTML = list_healthy;
+    list_testy = 'Перечень такой себе еды в холодильнике:'+ " "+ testy_food;
+    document.getElementById("testy_list_food").innerHTML = list_testy;
 }
 let gas_stone_is_clean = false;
-
-
-
-
 
 
 
@@ -142,3 +150,5 @@ function cookingBorscht() {
 console.log(`i dirtied the stove when cooked the borscht!`);
 gas_stone_is_clean = false;
 }
+
+
