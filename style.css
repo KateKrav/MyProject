@@ -1,0 +1,43 @@
+.container{
+    width: 626px;
+    display: block;
+    margin: 0 auto;
+    background-color: #e6da88;
+}
+p {background-color: cornflowerblue;
+    width: 300px;
+    margin: 15px;
+}
+.box{
+    display: flex;
+    justify-content: center;
+}
+.box button{
+    padding: 5px;
+    margin: 10px;
+
+}
+p{
+    padding-left: 5px;
+}
+label{
+    margin: 0 auto;
+    display: block;
+    text-align: center;
+}
+
+body{
+    background-color: rgb(54, 54, 54);
+}
+.club_img{
+    width: 626px;
+    height: auto;
+}
+.club_bg{
+    background-color: #9e6b4e;
+}
+span{
+    color: white;
+    font-size: 20px;
+    padding: 10px;
+}
