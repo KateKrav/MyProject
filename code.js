@@ -1,22 +1,19 @@
-let generalList =  [ "вася", "петя", "маша", "даша", "женя"];
+let generalList = ["вася", "петя", "маша", "даша", "женя"];
 let userName;
-let findName = "";
-let nameOfList;
-let decision;
-let warning;
+let decision = false;
 
-function findNameInList(){
-    userName = document.getElementById("name_user").value ;
-  for (let i = 0; i < generalList.length; i++){
+function findNameInList() {
+    userName = document.getElementById("name_user").value;
+    for (let i = 0; i < generalList.length; i++) {
 
-      if (userName === generalList[i]) {
-          decision = ", проходи!";
-          console.log(decision);
-      }
-      else decision = ", проваливай!";
-      console.log(decision);
-  }
-
-    document.getElementById("showMessage").innerHTML = userName + decision;
-
+        if (userName === generalList[i]) {
+            decision = true;
+            // console.log(decision);
+        }
+    }
+    let message = ", УХОДИ";
+    if (decision === true) {
+        message = ", ПРОХОДИ"
+    }
+    document.getElementById("showMessage").innerHTML = userName + message;
 }
