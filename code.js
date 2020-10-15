@@ -13,7 +13,7 @@ function findNameInList(){
           decision = ", проходи!";
           console.log(decision);
       }
-      else decision = ", проваливай!"
+      else decision = ", проваливай!";
       console.log(decision);
   }
 
