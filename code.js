@@ -50,14 +50,22 @@ let numberEnterUser;
 function simileNumber() {
     numberEnterUser = document.getElementById("getNumber").value;
     if (numberEnterUser > b){
-        return true;
+        return true ;
+    }
+}
+
+function equally() {
+    numberEnterUser = document.getElementById("getNumber").value;
+    if (numberEnterUser === b){
+        return false;
+
     }
 }
 
 function checkSimile() {
-    if (simileNumber()){
+    if (simileNumber() || equally() ){
         console.log(`${numberEnterUser} БОЛЬШЕ заданого числа 6`)
-    }else {
-        console.log(`${numberEnterUser} МЕНЬШЕ заданого числа или РАВНО 6`)
-    }
+    } else if (equally()) {
+        console.log(`${numberEnterUser} РавнО заданому числу 6`)
+    }else {console.log(`${numberEnterUser} меньше заданого числа 6`)}
 }
