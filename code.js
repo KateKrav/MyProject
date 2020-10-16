@@ -20,12 +20,12 @@ function checkIsTrue_() {
     }
 }
 
-function sum(a, b) {
-    return a + b;
-}
-
-result = sum( 5,3);
-console.log(result);
+// function sum(a, b) {
+//     return a + b;
+// }
+//
+// result = sum( 5,3);
+// console.log(result);
 
 let a = 1;
 let b = 6;
@@ -45,18 +45,19 @@ function checkIsTrue() {
 }
 
 
-let userNumber;
-  userNumber = document.getElementById("getNumber").value;
+let numberEnterUser;
+
 function simileNumber() {
-    if (userName > b){
+    numberEnterUser = document.getElementById("getNumber").value;
+    if (numberEnterUser > b){
         return true;
     }
 }
 
 function checkSimile() {
     if (simileNumber()){
-        console.log(`${userNumber}> заданого числа 6`)
+        console.log(`${numberEnterUser} БОЛЬШЕ заданого числа 6`)
     }else {
-        console.log(`${userNumber}< заданого числа или равно 6`)
+        console.log(`${numberEnterUser} МЕНЬШЕ заданого числа или РАВНО 6`)
     }
 }
