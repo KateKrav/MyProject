@@ -1,0 +1,42 @@
+.container{
+    margin: 0 auto;
+    width: 600px;
+
+}
+body{
+    background-color: #3f3f3f;
+}
+.class1 p, .class2 p, .class3 p{
+  padding: 0 10px;
+    text-align: center;
+}
+.class1, .class2, .class3{
+    margin: 20px;
+    color: white;
+}
+.list1, .list2, .list3{
+    background-color: white;
+    width: 200px;
+}
+.class1{
+    background-color: #c63017;
+
+ }
+.class2{
+    background-color: #005f00;
+
+}
+.class3{
+    background-color: cornflowerblue;
+
+}
+.condition{
+    background-color: white;
+    padding: 20px 40px;
+    margin-bottom: 20px;
+}
+.faculty{
+    display: flex;
+    justify-content: center;
+
+}
