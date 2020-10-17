@@ -55,15 +55,16 @@ function simileNumber() {
 }
 
 function equally() {
-    numberEnterUser = document.getElementById("getNumber").value;
+    numberEnterUser = parseInt(document.getElementById("getNumber").value);
     if (numberEnterUser === b){
-        return false;
+        return true;
 
     }
 }
 
+
 function checkSimile() {
-    if (simileNumber() || equally() ){
+    if (simileNumber()){
         console.log(`${numberEnterUser} БОЛЬШЕ заданого числа 6`)
     } else if (equally()) {
         console.log(`${numberEnterUser} РавнО заданому числу 6`)
