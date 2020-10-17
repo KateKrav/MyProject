@@ -8,8 +8,7 @@ let showlistGriffindor = "";
 let showlistSlihterin = "";
 let showlistRavenclaw= "";
 let searchName;
-
-
+let hogwartsFaculty = [ griffindor, slytherin, ravenclaw];
 
 
 function listGriffindorStudent() {
@@ -42,7 +41,22 @@ function listRavenclawStudent() {
     }
 
 }
-function searchNameStudent() {
+
+ let faculty;
+let facultyList = false;
+let listStudent = true;
+
+function scanFaculty() {
+    if (facultyList === false){
+        for (let i = 0; i < hogwartsFaculty.length; i++) {
+            if (listStudent===true){
+                for (let j = 0; j < hogwartsFaculty.length; j++){
+                    console.log(hogwartsFaculty[i]+[j])
+                }
+            }
 
 
+        }
+    }
+    facultyList = true;
 }
