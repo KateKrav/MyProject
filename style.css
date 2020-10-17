@@ -8,11 +8,17 @@ body{
 }
 .class1 p, .class2 p, .class3 p{
   padding: 0 10px;
-    text-align: center;
+  text-align: center;
+  height: 30px;
 }
-.class1, .class2, .class3{
-    margin: 20px;
+.class1 button, .class2 button, .class3 button{
+    padding: 20px;
+
+}
+.class1, .class2, .class3 {
+    margin: 0 20px;
     color: white;
+
 }
 .list1, .list2, .list3{
     background-color: white;
@@ -39,4 +45,10 @@ body{
     display: flex;
     justify-content: center;
 
+}
+.search{
+    margin: 20px;
+}
+.blockSearch{
+    margin: 20px 0;
 }

@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>Faculty</title>
     <link rel="stylesheet" href="style.css">
+    <script src="faculty.js"></script>
 </head>
 <body>
 <div class="container">
@@ -11,19 +12,28 @@
 <div class="faculty">
     <div class="class1">
         <p>Гриффиндор (Gryffindor)</p>
-        <div class="list1"></div>
+        <button onclick = "listGriffindorStudent()">Показать список студентов</button>
+        <div id="list1" class="class1"></div>
     </div>
+
     <div class="class2">
         <p>Слизерин (Slytherin)</p>
-        <div class="list2"></div>
+        <button onclick="listSlytherinStudent()">Показать список студентов</button>
+        <div id="list2" class="class2"></div>
     </div>
+
+
     <div class="class3">
         <p>Когтевран (Ravenclaw)</p>
-        <div class="list3"></div>
+        <button onclick="listRavenclawStudent()">Показать список студентов</button>
+        <div id="list3" class="class3"></div>
     </div>
 </div>
-
-    <input id="search"><button>Поиск</button>
+<div class="blockSearch">
+    <label for="search" class="search">
+        <input id="search"><button>Поиск</button>
+    </label>
+</div>
 </div>
 </body>
 </html>
