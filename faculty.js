@@ -1,4 +1,4 @@
-let griffindor = [ "Альбус", "Гарри", "Гермиона", "Рон"];
+let griffindor = [ "Альбус", "Гарри", "Гермиона", "Рон", "Хагрид"];
 let slytherin = ["Суверус", "Малфой", "Волдемор"];
 let ravenclaw = ["Седрик","Полумна","Миртл"];
 let listGriffindor = false;
@@ -49,18 +49,19 @@ function scanFaculty() {
 
         for (let i = 0; i < hogwartsFaculty.length; i++) {
                 for (let j = 0; j < hogwartsFaculty.length; j++){
-                    // console.log(hogwartsFaculty[i][j]);
                     allStudents = hogwartsFaculty[i][j];
                     inputUserName = document.getElementById("inputSearch").value;
                     if ( hogwartsFaculty[i][j] === inputUserName){
                         console.log(inputUserName + ' учится здесь ...');
-                        break;
-                    }else {
-                        console.log("не найден");
+                    }
+                    else if (hogwartsFaculty[i][j] !== inputUserName) {
+                        console.log("такого нет студента ")
                     }
                 }
         }
+}
 
+function fineFaculty() {
 
 
 }
