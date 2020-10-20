@@ -76,8 +76,14 @@ function getMessage() {
 }
 
 let newUserName;
+let checkbox;
 
 function addNewStudent() {
+   document.getElementById("1poi").innerHTML = checkbox;
+    if (checkbox === true){
+        console.log("11111")
+    }
+
 
 
 }
