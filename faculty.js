@@ -78,7 +78,6 @@ function getMessage() {
 let newUserName;
 
 function addNewStudent() {
-    newUserName = document.getElementById("getNewName").value;
-   ;
+
 
 }
