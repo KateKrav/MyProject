@@ -8,7 +8,8 @@
 </head>
 <body>
 <div class="container">
-    <div class="condition"> <p>Создать 3 факультета с учениками и создать отдельный импут с поиском по имени</p></div>
+    <div class="condition"> <p>Создать 3 факультета с учениками и создать отдельный импут с поиском по имени</p>
+    <p>Сделать форму в которой будет по характеристикам отправлять на подходяший факультет</p></div>
 <div class="faculty">
     <div class="class1">
         <p>Гриффиндор (Gryffindor)</p>
@@ -33,12 +34,34 @@
     <label for="inputSearch" class="search">
         <input id="inputSearch"><button onclick="scanFaculty()">Поиск</button>
     </label>
-    <div class="massege" ><p id="GETmassege"></p></div>
+    <div class="massege" id="hidden_massege" hidden>
+        <p id="GETmassege"></p>
+    </div>
+
+</div>
 
     <div class="section_push-student">
-    <button class="block_img"><img src="img/hat.png" alt=""></button>
+        <div class="block_img"><img src="img/hat.png" alt=""></div>
+<!--        <div class="massege2">-->
+<!--            <input id="getNewName"><button onclick="addNewStudent()">Вступить в Хогвартс</button>-->
+<!--            <p id="GETmassegeFromHat"></p>-->
+<!--        </div>-->
+        <div class="form_new-student">
+            <form>
+                <input placeholder="Имя">
+                <p>Какие качества тебе больше всего подходят?</p>
+                <p><input type="checkbox" name="option1" value="1 points" checked>Храбрость<br>
+                    <input type="checkbox" name="option2" value="2 points">Трудолюбие<br>
+                    <input type="checkbox" name="option3" value="3 points">Мудрость<br>
+                    <input type="checkbox" name="option4" value="4 points">Решительность<br>
+                    <input type="checkbox" name="option5" value="5 points">Благородство<br>
+                    <input type="checkbox" name="option6" value="6 points">Верность<br>
+                    <input type="checkbox" name="option7" value="7 points">Амбициозность<br>
+                <p><input type="submit" value="Отправить"></p>
+            </form>
+        </div>
+
     </div>
-</div>
 </div>
 </body>
 </html>

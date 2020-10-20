@@ -53,17 +53,35 @@ body{
     margin: 20px 0;
 }
 
-.massege p{
+.massege p, .massege2 p{
     background-color: antiquewhite;
     width: 300px;
     padding: 20px;
     margin: 10px 0 ;
     border-radius: 10px;
 }
+.massege2 p{
+    width: 150px;
+}
+
 .block_img img{
     width: 400px;
 }
 .block_img {
     background-color: #3f3f3f;
     border-radius: 50%;
+    /*background: url("img/faculty.jpeg") no-repeat;*/
+    background-position: center;
+    background-size: cover;
+}
+.block_img:hover{
+    background: linear-gradient(rgba(230, 100, 101, 0.71), rgba(145, 152, 229, 0.67));
+}
+.section_push-student{
+    display: flex;
+
+}
+.form_new-student{
+    background-color: bisque;
+    padding: 5px;
 }

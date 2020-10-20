@@ -71,6 +71,14 @@ function scanFaculty() {
 }
 
 function getMessage() {
+    document.getElementById("hidden_massege").hidden = false;
     document.getElementById("GETmassege").innerHTML = searchName + ' учится здесь';
 }
 
+let newUserName;
+
+function addNewStudent() {
+    newUserName = document.getElementById("getNewName").value;
+   ;
+
+}
