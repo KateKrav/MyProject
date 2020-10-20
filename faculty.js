@@ -42,26 +42,35 @@ function listRavenclawStudent() {
 
 }
 
-let allStudents = "";
-let inputUserName;
+let result = false;
+
+function getName() {
+    searchName = document.getElementById("inputSearch").value;
+}
+
+function notFoundName() {
+  if ( result === false)  {
+      document.getElementById("GETmassege").innerHTML = "Имя не найдено";
+  }
+}
 
 function scanFaculty() {
+    getName();
+    for (let i = 0; i < hogwartsFaculty.length; i++) {
+        for (let j = 0; j < hogwartsFaculty[i].length; j++) {
+            if (hogwartsFaculty[i][j] === searchName) {
+                getMessage();
+                // console.log(searchName + ' учится здесь');
+                result = true;
 
-        for (let i = 0; i < hogwartsFaculty.length; i++) {
-                for (let j = 0; j < hogwartsFaculty.length; j++){
-                    allStudents = hogwartsFaculty[i][j];
-                    inputUserName = document.getElementById("inputSearch").value;
-                    if ( hogwartsFaculty[i][j] === inputUserName){
-                        console.log(inputUserName + ' учится здесь ...');
-                    }
-                    else if (hogwartsFaculty[i][j] !== inputUserName) {
-                        console.log("такого нет студента ")
-                    }
-                }
+            }notFoundName();
+
         }
+    }
+    
 }
 
-function fineFaculty() {
-
-
+function getMessage() {
+    document.getElementById("GETmassege").innerHTML = searchName + ' учится здесь';
 }
+
