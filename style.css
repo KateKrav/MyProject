@@ -53,14 +53,14 @@ body{
     margin: 20px 0;
 }
 
-.massege p, .massege2 p{
+.message p, .message2 p{
     background-color: antiquewhite;
     width: 300px;
     padding: 20px;
     margin: 10px 0 ;
     border-radius: 10px;
 }
-.massege2 p{
+.message2 p{
     width: 150px;
 }
 

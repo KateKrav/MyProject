@@ -31,7 +31,7 @@ function listSlytherinStudent() {
         }
         listSlihterin = true;
     }
-    
+
 }
 function listRavenclawStudent() {
     if (listRavenclaw === false){
@@ -52,8 +52,8 @@ function getName() {
 
 function notFoundName() {
     if (searchName){
-        document.getElementById("hidden_massege").hidden = false;
-        document.getElementById("GETmassege").innerHTML = "Имя не найдено";
+        document.getElementById("hidden_message").hidden = false;
+        document.getElementById("GETmessage").innerHTML = "Имя не найдено";
     }
 }
 
@@ -70,7 +70,7 @@ function scanFaculty() {
 
         }
     }
-    
+
 }
 
 function getMessage() {
@@ -80,13 +80,37 @@ function getMessage() {
 
 let newUserName;
 let check;
+check1 = document.getElementById("1poi");
+check2 = document.getElementById("2poi");
+check3 = document.getElementById("3poi");
+check4 = document.getElementById("4poi");
+check5 = document.getElementById("5poi");
+check6 = document.getElementById("6poi");
+
+
+let featureGriffindor =[check1 , check4];
+let featureSlytherin =[check2 , check6];
+let featureRavenclaw =[check3 , check5];
+
+function findYourFaculty() {
+    if (check1 || check4){
+
+    }
+}
 
 function addNewStudent() {
    check = document.getElementById("1poi");
     if (check.checked === true){
         console.log("11111")
     }
+}
 
 
 
+
+
+
+//гриф.=1poi,4poi; слиз= 7poi, когт= 3poi,5poi;
+function test() {
+    console.dir( document.body);
 }
