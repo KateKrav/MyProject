@@ -88,21 +88,24 @@ check5 = document.getElementById("5poi");
 check6 = document.getElementById("6poi");
 
 
-let featureGriffindor =[check1 , check4];
+let featureGriffindor =[check1.checked , check4.checked];
 let featureSlytherin =[check2 , check6];
 let featureRavenclaw =[check3 , check5];
 
 function findYourFaculty() {
-    if (check1 || check4){
-
-    }
+   for (let i = 0; i < featureGriffindor; i++ ){
+       if (featureGriffindor === true){
+           console.log("грифиндор")
+       }
+   }
 }
 
 function addNewStudent() {
-   check = document.getElementById("1poi");
-    if (check.checked === true){
-        console.log("11111")
-    }
+    findYourFaculty();
+   // check = document.getElementById("1poi");
+   //  if (check.checked === true){
+   //      console.log("11111")
+   //  }
 }
 
 
