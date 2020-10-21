@@ -11,6 +11,8 @@ let searchName;
 let hogwartsFaculty = [ griffindor, slytherin, ravenclaw];
 
 
+
+
 function listGriffindorStudent() {
     if (listGriffindor === false){
         for ( let i = 0; i < griffindor.length; i++){
@@ -49,9 +51,10 @@ function getName() {
 }
 
 function notFoundName() {
-  if ( result === false)  {
-      document.getElementById("GETmassege").innerHTML = "Имя не найдено";
-  }
+    if (searchName){
+        document.getElementById("hidden_massege").hidden = false;
+        document.getElementById("GETmassege").innerHTML = "Имя не найдено";
+    }
 }
 
 function scanFaculty() {
@@ -76,11 +79,11 @@ function getMessage() {
 }
 
 let newUserName;
-let checkbox;
+let check;
 
 function addNewStudent() {
-   document.getElementById("1poi").innerHTML = checkbox;
-    if (checkbox === true){
+   check = document.getElementById("1poi");
+    if (check.checked === true){
         console.log("11111")
     }
 
