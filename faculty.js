@@ -57,6 +57,7 @@ function notFoundName() {
     }
 }
 
+
 function scanFaculty() {
     getName();
     for (let i = 0; i < hogwartsFaculty.length; i++) {
