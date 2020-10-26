@@ -50,8 +50,43 @@ function listRavenclawStudent() {
         }
         listRavenclaw = true;
     }
+}
+
+let result = false;
+
+function getName() {
+    searchName = document.getElementById("inputSearch").value;
+}
+
+function notFoundName() {
+    if (searchName){
+        document.getElementById("hidden_message").hidden = false;
+        document.getElementById("GET_message").innerHTML = "Имя не найдено";
+    }
+}
+
+function scanFaculty() {
+    getName();
+    for (let i = 0; i < hogwartsFaculty.length; i++) {
+        for (let j = 0; j < hogwartsFaculty[i].length; j++) {
+            if (hogwartsFaculty[i][j] === searchName) {
+                getMessage();
+                // console.log(searchName + ' учится здесь');
+                result = true;
+
+            }notFoundName();
+
+        }
+    }
 
 }
+
+function getMessage() {
+    document.getElementById("hidden_massage").hidden = false;
+    document.getElementById("GET_massage").innerHTML = searchName + ' учится здесь';
+}
+
+
 
 let featureGriffindor;
 let featureSlytherin;
@@ -96,17 +131,11 @@ function addNewStudent() {
     get_values();
     findYourFaculty();
     introduction();
-    // check = document.getElementById("1poi");
-    //  if (check.checked === true){
-    //      console.log("11111")
-    //  }
+
 }
 
 
-//гриф.=1poi,4poi; слиз= 7poi, когт= 3poi,5poi;
-function test() {
-    console.dir(document.body);
-}
+
 
 function introduction() {
 if (griffindor_decision > slitherin_decision && griffindor_decision > ravenclaw_decision){
@@ -131,5 +160,12 @@ else if (griffindor_decision === ravenclaw_decision){
 else if (slitherin_decision === ravenclaw_decision){
     console.log("вы можете выбрать между слизерином и когтевраном")
 }
+
+}
+
+
+let newStudent;
+function getNewNameStudent() {
+    newStudent = document.getElementById("enterName").value;
 
 }
