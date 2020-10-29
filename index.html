@@ -7,12 +7,55 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<button onclick="funPush()">Button</button><br><br>
-<button onclick="funPop()">Button</button><br><br>
-<button onclick="funShift()">Button</button><br><br>
-<button onclick="funUnshift()">Button</button><br><br>
-<button onclick="deleteElement()">Button</button><br><br>
-<button onclick="replaceElement()">Button</button><br><br>
+<div><p>сделай например урок физры и 2 команды детей.
+    распределяй детей между двумя командами через интерфейс
+    в начале список участников, напротив каждого имени есть кнопка «в команду 1», «в команду 2»</p></div>
+<div class="box">
+
+
+<div>
+    <p>Вася</p>
+    <button onclick="addInTeamOne()" class="btn_1">В команду 1</button>
+    <button onclick="addInTeamTwo()" class="btn_2">В команду 2</button>
+    <p>Маша</p>
+    <button onclick="addInTeamOne()" class="btn_1">В команду 1</button>
+    <button onclick="addInTeamTwo()" class="btn_2">В команду 2</button>
+    <p>Саша</p>
+    <button onclick="addInTeamOne()" class="btn_1">В команду 1</button>
+    <button onclick="addInTeamTwo()" class="btn_2">В команду 2</button>
+    <p>Паша</p>
+    <button onclick="addInTeamOne()" class="btn_1">В команду 1</button>
+    <button onclick="addInTeamTwo()" class="btn_2">В команду 2</button>
+    <p>Софи</p>
+    <input type="radio" id="team_blue">
+    <input type="radio" id="team_green">
+
+    <button class="btn_1">В команду 1</button>
+    <button class="btn_2">В команду 2</button>
+
+    <p>Маша</p>
+    <button class="btn_1">В команду 1</button>
+    <button class="btn_2">В команду 2</button>
+    <p>Гоша</p>
+    <button class="btn_1">В команду 1</button>
+    <button class="btn_2">В команду 2</button>
+    <p>Марго</p>
+    <button class="btn_1">В команду 1</button>
+    <button class="btn_2">В команду 2</button>
+    <p>Макс</p>
+    <button class="btn_1">В команду 1</button>
+    <button class="btn_2">В команду 2</button>
+    <p>Аня</p>
+    <button class="btn_1">В команду 1</button>
+    <button class="btn_2">В команду 2</button>
+</div>
+    <div>
+        <div id="team_1"></div>
+        <div id="team_2"></div>
+        <div id="team_3"></div>
+        <div id="team_4"></div>
+    </div>
+</div>
 
 </body>
 </html>
